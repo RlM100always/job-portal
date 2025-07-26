@@ -76,6 +76,37 @@ This project fulfills the requirements for Module 26 Assignment: "Build a Job Po
 - **Dynamic Navigation**: Role-based navigation menus
 - **Interactive Elements**: Modern UI with JavaScript enhancements
 
+  ## 📸 Project Screenshots
+
+<p align="center">
+  <!-- Replace with your actual screenshots -->
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20170426.png?raw=true" />
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20170618.png?raw=true" />
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20170639.png?raw=true" />
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20170713.png?raw=true" />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  <img width="600" src=" " />
+  
+  
+</p>
+
+---
+
 ## 🚀 Installation & Setup
 
 ### Prerequisites
