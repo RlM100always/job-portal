@@ -84,23 +84,17 @@ This project fulfills the requirements for Module 26 Assignment: "Build a Job Po
   <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20170618.png?raw=true" />
   <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20170639.png?raw=true" />
   <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20170713.png?raw=true" />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
-  <img width="600" src=" " />
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20170734.png?raw=true" />
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20170751.png?raw=true" />
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20170810.png?raw=true" />
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20170839.png?raw=true" />
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20170901.png?raw=true" />
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20170929.png?raw=true" />
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20171044.png?raw=true" />
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20171118.png?raw=true" />
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20171129.png?raw=true" />
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20171405.png?raw=true" />
+  <img width="600" src="https://github.com/RlM100always/Hisab/blob/main/job_portal/Screenshot%202025-07-26%20171427.png?raw=true" />
   
   
 </p>
