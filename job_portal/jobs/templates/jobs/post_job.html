@@ -1,0 +1,118 @@
+{% extends 'jobs/base.html' %}
+
+{% block title %}Post a Job - Job Portal{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow">
+                <div class="card-body p-5">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-plus-circle fa-3x text-primary mb-3"></i>
+                        <h2 class="fw-bold">Post a New Job</h2>
+                        <p class="text-muted">Find the perfect candidate for your organization</p>
+                    </div>
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        <div class="mb-4">
+                            <label for="{{ form.title.id_for_label }}" class="form-label fw-bold">Job Title *</label>
+                            {{ form.title }}
+                            {% if form.title.errors %}
+                                <div class="text-danger small mt-1">{{ form.title.errors.0 }}</div>
+                            {% endif %}
+                            <div class="form-text">Enter a clear and descriptive job title</div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="{{ form.company_name.id_for_label }}" class="form-label fw-bold">Company Name *</label>
+                            {{ form.company_name }}
+                            {% if form.company_name.errors %}
+                                <div class="text-danger small mt-1">{{ form.company_name.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="{{ form.location.id_for_label }}" class="form-label fw-bold">Location *</label>
+                            {{ form.location }}
+                            {% if form.location.errors %}
+                                <div class="text-danger small mt-1">{{ form.location.errors.0 }}</div>
+                            {% endif %}
+                            <div class="form-text">City, State or Remote</div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="{{ form.description.id_for_label }}" class="form-label fw-bold">Job Description *</label>
+                            {{ form.description }}
+                            {% if form.description.errors %}
+                                <div class="text-danger small mt-1">{{ form.description.errors.0 }}</div>
+                            {% endif %}
+                            <div class="form-text">
+                                Include job responsibilities, requirements, qualifications, and benefits
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="fas fa-plus me-2"></i>Post Job
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="{% url 'jobs:employer_dashboard' %}" class="btn btn-outline-secondary btn-lg w-100">
+                                    <i class="fas fa-times me-2"></i>Cancel
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Tips Card -->
+            <div class="card mt-4">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0"><i class="fas fa-lightbulb me-2"></i>Tips for a Great Job Post</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-primary">Job Title</h6>
+                            <ul class="small text-muted">
+                                <li>Be specific and clear</li>
+                                <li>Use standard job titles</li>
+                                <li>Avoid internal jargon</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-primary">Description</h6>
+                            <ul class="small text-muted">
+                                <li>Include key responsibilities</li>
+                                <li>List required qualifications</li>
+                                <li>Mention company benefits</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .form-control, .form-select {
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        padding: 12px;
+    }
+    .form-control:focus, .form-select:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    textarea.form-control {
+        min-height: 150px;
+    }
+</style>
+{% endblock %}
+
