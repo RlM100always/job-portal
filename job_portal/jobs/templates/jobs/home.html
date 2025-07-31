@@ -1,0 +1,158 @@
+{% extends 'jobs/base.html' %}
+
+{% block title %}Home - Job Portal{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">Find Your Dream Job Today</h1>
+                <p class="lead mb-4">Connect with top employers and discover opportunities that match your skills and aspirations.</p>
+                <div class="d-flex gap-3">
+                    <a href="{% url 'jobs:job_list' %}" class="btn btn-light btn-lg">
+                        <i class="fas fa-search me-2"></i>Browse Jobs
+                    </a>
+                    {% if not user.is_authenticated %}
+                    <a href="{% url 'jobs:register' %}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-user-plus me-2"></i>Join Now
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <i class="fas fa-users fa-10x opacity-75"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="fw-bold">Why Choose JobPortal?</h2>
+                <p class="text-muted">We make job searching and hiring simple and effective</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 text-center p-4">
+                    <div class="card-body">
+                        <i class="fas fa-search fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Easy Job Search</h5>
+                        <p class="card-text">Find jobs by title, company, or location with our powerful search functionality.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center p-4">
+                    <div class="card-body">
+                        <i class="fas fa-handshake fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">Direct Applications</h5>
+                        <p class="card-text">Apply directly to employers with your resume and cover letter.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center p-4">
+                    <div class="card-body">
+                        <i class="fas fa-building fa-3x text-info mb-3"></i>
+                        <h5 class="card-title">Top Companies</h5>
+                        <p class="card-text">Connect with leading companies looking for talented professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Jobs Section -->
+{% if recent_jobs %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 class="fw-bold">Recent Job Opportunities</h2>
+                <p class="text-muted">Discover the latest job postings from top employers</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            {% for job in recent_jobs %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card job-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ job.title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            <i class="fas fa-building me-1"></i>{{ job.company_name }}
+                        </h6>
+                        <p class="text-muted mb-2">
+                            <i class="fas fa-map-marker-alt me-1"></i>{{ job.location }}
+                        </p>
+                        <p class="card-text">{{ job.description|truncatewords:20 }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">
+                                <i class="fas fa-clock me-1"></i>{{ job.created_at|timesince }} ago
+                            </small>
+                            <a href="{% url 'jobs:job_detail' job.id %}" class="btn btn-primary btn-sm">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{% url 'jobs:job_list' %}" class="btn btn-primary btn-lg">
+                <i class="fas fa-eye me-2"></i>View All Jobs
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Call to Action -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card stats-card h-100 p-4">
+                    <div class="card-body text-center">
+                        <i class="fas fa-user-tie fa-3x mb-3"></i>
+                        <h4>For Job Seekers</h4>
+                        <p>Find your next career opportunity with our comprehensive job listings.</p>
+                        <a href="{% url 'jobs:job_list' %}" class="btn btn-light">
+                            <i class="fas fa-search me-2"></i>Search Jobs
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card bg-primary text-white h-100 p-4">
+                    <div class="card-body text-center">
+                        <i class="fas fa-building fa-3x mb-3"></i>
+                        <h4>For Employers</h4>
+                        <p>Post jobs and find the perfect candidates for your organization.</p>
+                        {% if user.is_authenticated and user.userprofile.role == 'employer' %}
+                            <a href="{% url 'jobs:post_job' %}" class="btn btn-light">
+                                <i class="fas fa-plus me-2"></i>Post a Job
+                            </a>
+                        {% else %}
+                            <a href="{% url 'jobs:register' %}" class="btn btn-light">
+                                <i class="fas fa-user-plus me-2"></i>Join as Employer
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
