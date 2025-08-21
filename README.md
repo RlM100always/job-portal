@@ -1,10 +1,14 @@
 # Job Portal Application
-
+  <a href="https://job-portal-4-pxqx.onrender.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Demo-Visit-2ea44f?logo=google-chrome&logoColor=white" alt="Live Demo">
+  </a>
+  
 A comprehensive Django-based job portal web application that connects employers with job seekers. This application allows employers to post jobs and applicants to search and apply for positions.
 
 ## 🎯 Assignment Overview
 
 This project fulfills the requirements for Module 26 Assignment: "Build a Job Portal Application with Search Functionality" using Django framework.
+
 
 ## ✨ Features
 
