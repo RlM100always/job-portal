@@ -7,7 +7,7 @@ A comprehensive Django-based job portal web application that connects employers 
 
 ## 🎯 Assignment Overview
 
-This project fulfills the requirements for Module 26 Assignment: "Build a Job Portal Application with Search Functionality" using Django framework.
+"Build a Job Portal Application with Search Functionality" using Django framework.
 
 
 ## ✨ Features
